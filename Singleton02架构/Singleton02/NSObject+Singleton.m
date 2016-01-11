@@ -20,9 +20,9 @@ id instance;
   {
     //初始化字典；
     if (instanceDict == nil) {
+
       instanceDict = [[NSMutableDictionary alloc] init];
     }
-
     //获取类名；
     NSString *className = NSStringFromClass([self class]);
     if (className) {
@@ -38,8 +38,8 @@ id instance;
     }else{
       //没有获取类名，所以确保sharedInstance是一个类方法，用类进行调用；
     }
-
     return instance;
   }
 }
+
 @end

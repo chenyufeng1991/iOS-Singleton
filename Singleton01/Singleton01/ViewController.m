@@ -15,15 +15,13 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
-  [super viewDidLoad];
+- (void)viewDidLoad{
 
+  [super viewDidLoad];
   [self testSigleTon];
 }
 
--(void)testSigleTon
-{
+-(void)testSigleTon{
   //单例的结果就是，调用类方法，只返回一个共有的对象
   /**
    *  single和single2是同一个对象；
@@ -31,15 +29,12 @@
    */
   Singleton *single = [Singleton sharedInstance];
   Singleton *single2 = [Singleton sharedInstance];
-
   if (single == single2) {
+
     NSLog(@"single == single2");
   }
-
   NSLog(@"single地址：%@",single);
   NSLog(@"single2地址：%@",single2);
-  
-  
 }
 
 @end

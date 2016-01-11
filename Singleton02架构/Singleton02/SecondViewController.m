@@ -24,34 +24,34 @@
  *  在另一个界面中做同样的测试；
  */
 - (void)viewDidLoad {
-  [super viewDidLoad];
 
+  [super viewDidLoad];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
 
   [super viewDidAppear:animated];
-
   SecondViewController *secondVc1 = [SecondViewController sharedInstance];
   SecondViewController *secondVc2 = [SecondViewController sharedInstance];
-
   NSLog(@"SecondViewController---secondVc1地址:%@",secondVc1);
   NSLog(@"SecondViewController---secondVc2地址:%@",secondVc2);
 
   if (secondVc1 == secondVc2) {
+
     NSLog(@"SecondViewController---secondVc1 == secondVc2");
   }
 
   for (int i = 0; i < 5; i++) {
+
     Person *per1 = [Person sharedInstance];
     NSLog(@"SecondViewController---per1地址：%@",per1);
   }
 
   for (int i = 0; i < 5; i++) {
+
     StudentModel *stud = [[StudentModel alloc] init];
     NSLog(@"SecondViewController---stud地址：%@",stud);
   }
-
 }
 
 /**

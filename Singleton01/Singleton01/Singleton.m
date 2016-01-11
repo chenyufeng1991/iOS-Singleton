@@ -18,6 +18,7 @@ static Singleton *_sharedInstance = nil;
  */
 +(Singleton *)sharedInstance{
   if (!_sharedInstance) {
+
     _sharedInstance =[[self alloc]init];
   }
   return _sharedInstance;
